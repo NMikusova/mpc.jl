@@ -6,7 +6,7 @@ function eregulation(mdl,t)
 
   u = zeros(size(mdl.B,2),t)
   x = zeros(size(mdl.A,1),t+1)
-  nu = size(mdl.um1,1)
+  nu = size(mdl.B,2)
   x[:,1] = theta
   #
   for k = 1:t
