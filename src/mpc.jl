@@ -1,4 +1,7 @@
 module mpc
+  export rmodel, tmodel
+  export iregulation, itracking
+  export eregulation, etracking
   include("enumeration_approach.jl")
   include("er_matrices.jl")
   include("eregulation.jl")
