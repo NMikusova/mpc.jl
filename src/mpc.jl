@@ -1,7 +1,4 @@
 module mpc
-  export rmodel, tmodel
-  export iregulation, itracking
-  export eregulation, etracking
   include("enumeration_approach.jl")
   include("er_matrices.jl")
   include("eregulation.jl")
@@ -21,4 +18,8 @@ module mpc
   include("rmodel.jl")
   include("tmodel.jl")
   include("weight_size_check.jl")
+  using MathProgBase, Clp, Ipopt, Combinatorics
+  export rmodel, tmodel
+  export iregulation, itracking
+  export eregulation, etracking
 end
