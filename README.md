@@ -14,12 +14,20 @@ Input arguments:
 
 Argument | Description
 ------------ | -------------
-A,B | State-space matrices
-x0 | Initial condition
-Qx,Qu | Weighting matrices
-umin,umax | Box constraints on inputs
-xmin,xmax | Box constraints on states
-N | Prediction horizon
+`A,B` | State-space matrices
+`x0` | Initial condition for states
+`Qx,Qu` | Weighting matrices
+`umin,umax` | Box constraints on inputs
+`xmin,xmax` | Box constraints on states
+`N` | Prediction horizon
+`t` | Simulation time
+
+Output arguments:
+
+Argument | Description
+------------ | -------------
+`u` | Optimal control action
+`x` | Optimal states
 
 #### Regulation problem + Implicit MPC
 ```
@@ -42,6 +50,31 @@ u,x = eregulation(mdl,t)
 ```
 mdl = rmodel(A,B,x0,Qx,Qu,umin,umax,[],[],N)
 ```
+
+### Tracking Problem
+
+Input arguments:
+
+Argument | Description
+------------ | -------------
+`A,B,C,D` | State-space matrices
+`x0` | Initial condition for states
+`um1` | Initial condition for inputs
+`Qy,Qu` | Weighting matrices
+`ref` | Reference
+`umin,umax` | Box constraints on inputs
+`dumin,dumax` | Box constraints on input increments
+`ymin,ymax` | Box constraints on outputs
+`N` | Prediction horizon
+`t` | Simulation time
+
+Output arguments:
+
+Argument | Description
+------------ | -------------
+`u` | Optimal control action
+`y` | Optimal outputs
+`x` | Optimal states
 
 #### Tracking problem + Implicit MPC
 ```
