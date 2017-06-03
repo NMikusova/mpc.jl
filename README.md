@@ -4,6 +4,13 @@ Julia package for Implicit and Explicit Model Predictive Control
 ## Download and Install
 In console: `Pkg.clone("git://github.com/NMikusova/mpc.jl.git")`
 
+mpc.jl depends on these registered packages (installed automatically):
+* MathProgBase
+* Clp
+* Ipopt
+* Combinatorics
+
+
 ## How to use the tool
 Initialization:
 `using mpc`
