@@ -10,6 +10,8 @@ Initialization:
 
 ### Regulation Problem
 
+Objective: regulate the system toward its origin, i.e., to a zero state.
+
 Input arguments:
 
 Argument | Description
@@ -52,6 +54,8 @@ mdl = rmodel(A,B,x0,Qx,Qu,umin,umax,[],[],N)
 ```
 
 ### Tracking Problem
+
+Objective: offset-free tracking of non-zero reference
 
 Input arguments:
 
