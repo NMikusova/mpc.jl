@@ -108,3 +108,21 @@ u,y,x = etracking(mdl,t)
 ```
 mdl = tmodel(A,B,C,D,x0,um1,Qy,Qu,ref,umin,umax,[],[],[],[],N)
 ```
+
+## Example
+```
+A = [-0.0490 -0.3278;0.2622 0.7376];
+B = [0.2622; 0.2099];
+Qx = eye(2,2);
+Qu = 0.1;
+N = 5;
+x0 = [-1;3];
+umin = -1.5;
+umax = 0.5;
+t = 20
+
+tic()
+mdl = rmodel(A,B,x0,Qx,Qu,umin,umax,[],[],N)
+u,x = iregulation(mdl,t)
+toc()
+```
