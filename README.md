@@ -26,25 +26,39 @@ u,x = iregulation(mdl,t)
 ```
 
 `xmin` and `xmax` are optional:
+```
 mdl = rmodel(A,B,x0,Qx,Qu,umin,umax,[],[],N)
+```
 
 #### Regulation problem + Explicit MPC
+```
 mdl = rmodel(A,B,x0,Qx,Qu,umin,umax,xmin,xmax,N)
 u,x = eregulation(mdl,t)
+```
 
 `xmin` and `xmax` are optional:
+```
 mdl = rmodel(A,B,x0,Qx,Qu,umin,umax,[],[],N)
+```
 
 #### Tracking problem + Implicit MPC
+```
 mdl = tmodel(A,B,C,D,x0,um1,Qy,Qu,ref,umin,umax,dumin,dumax,ymin,ymax,N)
 u,y,x = itracking(mdl,t)
+```
 
 `dumin`,`dumax`,`ymin` and `ymax` are optional:
+```
 mdl = tmodel(A,B,C,D,x0,um1,Qy,Qu,ref,umin,umax,[],[],[],[],N)
+```
 
 #### Tracking problem + Explicit MPC
+```
 mdl = tmodel(A,B,C,D,x0,um1,Qy,Qu,ref,umin,umax,dumin,dumax,ymin,ymax,N)
 u,y,x = etracking(mdl,t)
+```
 
 `dumin`,`dumax`,`ymin` and `ymax` are optional:
+```
 mdl = tmodel(A,B,C,D,x0,um1,Qy,Qu,ref,umin,umax,[],[],[],[],N)
+```
