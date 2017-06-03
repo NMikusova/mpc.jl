@@ -12,6 +12,8 @@ Initialization:
 
 Input arguments:
 
+Argument | Description
+------------ | -------------
 A,B | State-space matrices
 x0 | Initial condition
 Qx,Qu | Weighting matrices
